@@ -1,0 +1,52 @@
+.App {
+    text-align: center;
+}
+
+.App-logo {
+    height: 40vmin;
+    pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
+}
+.logi {
+    margin-left: 40px;
+}
+.App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.App-link {
+    color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.shopsblocks {
+    display: flex; /* Afficher les blocs en ligne */
+    overflow-x: auto; /* Activer la barre de défilement horizontale si nécessaire */
+    white-space: nowrap; /* Empêcher le texte de passer à la ligne */
+    width: 100%; /* Largeur maximale du contenant, ajustez selon vos besoins */
+}
+
+.shopsblocks {
+    flex: 0 0 auto; /* Les blocs ne changent pas de largeur */
+    margin-right: 20px; /* Marge entre les blocs, ajustez selon vos besoins */
+}
