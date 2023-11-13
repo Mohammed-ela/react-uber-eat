@@ -1,18 +1,34 @@
 import React from "react";
+import { useState } from "react";
+import { Monheader } from "./Monheader.js";
 import "./App.css";
 import "./main.css";
 import "./index.css";
-import burgerImage from "./logo.svg";
-import burgerImages from "./images.jpg";
+import Logo from "./logo.svg";
+import Macdo from "./images.jpg";
+import Kebab from "./kebab.jpg";
+import KFC from "./kfc.jpeg";
+import Sandwich from "./sandwich.jpg";
 
-// Composant BurgerBlock
+
+// Composant 
 function BurgerBlock({ imagePath, restaurantName, burgerName, price }) {
+
+    const [qte, setQte] = useState(0);
+
+    const incrementQte = () => {
+        setQte(qte + 1);
+    }
+
     return (
         <div className='shops--block'>
-            <img src={imagePath} alt={restaurantName} />
+            <img className='menu' src={imagePath} alt={restaurantName} />
             <a href='#'>{restaurantName}</a>
             <p className='block__desc'>{burgerName}</p>
             <p className='block__prix'>{price}</p>
+            <button className='quantite' onClick={incrementQte}>
+                {qte}
+            </button>
         </div>
     );
 }
@@ -20,6 +36,8 @@ function BurgerBlock({ imagePath, restaurantName, burgerName, price }) {
 // Composant App
 function App() {
     return (
+<>
+        <Monheader/>
         <div className='App'>
             {/* Votre contenu HTML */}
             <header>
@@ -28,8 +46,8 @@ function App() {
                         <div className='headerlogo'>
                             <img
                                 class='logi'
-                                src={burgerImage}
-                                alt='Image de burger'
+                                src={Logo}
+                                alt='Image du menu'
                             />
                         </div>
 
@@ -74,35 +92,39 @@ function App() {
                     </div>
 
                     <div className='shopsblocks'>
-                        {/* Réutilisation du composant BurgerBlock pour afficher 4 blocs de burgers similaires */}
+
                         <BurgerBlock
-                            imagePath={burgerImages}
-                            burgerName='BIG MAC™'
-                            price='11,45 €'
+                            imagePath={Macdo}
+                            burgerName='Menu MacDo™'
+                            price='12,50 €'
+                             
                         />
                         <BurgerBlock
-                            imagePath={burgerImages}
-                            burgerName='BIG MAC™'
-                            price='11,45 €'
+                            imagePath={Kebab}
+                            burgerName='Kebab™'
+                            price='8,50 €'
+                          
                         />
-                        {
+                        
                             <BurgerBlock
-                                imagePath={burgerImages}
-                                burgerName='BIG MAC™'
-                                price='11,45 €'
+                                imagePath={KFC}
+                                burgerName='KFC™'
+                                price='10,00 €'
+                                
                             />
-                        }
-                        {
+                       
                             <BurgerBlock
-                                imagePath={burgerImages}
-                                burgerName='BIG MAC™'
-                                price='11,45 €'
+                                imagePath={Sandwich}
+                                burgerName='Sandwich™'
+                                price='3,50 €'
+                            
                             />
-                        }
+                        
                     </div>
                 </div>
             </section>
         </div>
+        </>
     );
 }
 

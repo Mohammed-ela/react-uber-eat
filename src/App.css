@@ -14,6 +14,26 @@
 }
 .logi {
     margin-left: 40px;
+
+}
+
+.menu{
+    width: 380px;
+    height: 250px;
+}
+
+.quantite{
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 17px;
+  padding: 1em 2.7em;
+  font-weight: 500;
+  background: #1F2937;
+  color: white;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.6em;
+  cursor: pointer;
 }
 .App-header {
     background-color: #282c34;
