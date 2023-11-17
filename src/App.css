@@ -21,11 +21,42 @@
     width: 380px;
     height: 250px;
 }
-
+.quantity-group{
+    display: flex;
+    align-items: center;
+gap: 10px;
+justify-content: center;
+}
+.moin{
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-size: 17px;
+    padding: 7px 20px;
+  font-weight: 500;
+  background: #1F2937;
+  color: white;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.6em;
+  cursor: pointer;
+}
 .quantite{
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  font-size: 17px;
-  padding: 1em 2.7em;
+    font-size: 17px;
+    padding: 7px 20px;
+  font-weight: 500;
+  background: #1F2937;
+  color: white;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.6em;
+  cursor: pointer;
+}
+.plus{
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-size: 17px;
+    padding: 7px 20px;
   font-weight: 500;
   background: #1F2937;
   color: white;
@@ -70,3 +101,16 @@
     flex: 0 0 auto; /* Les blocs ne changent pas de largeur */
     margin-right: 20px; /* Marge entre les blocs, ajustez selon vos besoins */
 }
+.cart-icon {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .bubble {
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 4px 9px;
+    font-size: 12px;
+    margin-bottom: 31px;
+  }
