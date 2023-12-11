@@ -1,6 +1,6 @@
 // Composant BurgerBlock
 import { useState } from "react";
-export function BurgerBlock({ imagePath, burgerName, price, addToCart, removeFromCart}) {
+export function Produit({ imagePath, burgerName, price, addToCart, removeFromCart}) {
     const [qte, setQte] = useState(0);
   
     const incrementQte = () => {

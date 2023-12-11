@@ -91,15 +91,21 @@ justify-content: center;
 }
 
 .shopsblocks {
-    display: flex; /* Afficher les blocs en ligne */
-    overflow-x: auto; /* Activer la barre de défilement horizontale si nécessaire */
-    white-space: nowrap; /* Empêcher le texte de passer à la ligne */
-    width: 100%; /* Largeur maximale du contenant, ajustez selon vos besoins */
+    display: flex; 
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap:2%;
+
 }
 
-.shopsblocks {
-    flex: 0 0 auto; /* Les blocs ne changent pas de largeur */
-    margin-right: 20px; /* Marge entre les blocs, ajustez selon vos besoins */
+
+.shops--block{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 12px;
 }
 .cart-icon {
     display: flex;
@@ -114,3 +120,39 @@ justify-content: center;
     font-size: 12px;
     margin-bottom: 31px;
   }
+/* forms */
+.form {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    margin-top: 20px;
+}
+
+.btn-maj {
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.title-form {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.paragraphe-form {
+    font-size: 14px;
+    text-align: justify;
+    margin-bottom: 20px;
+}
